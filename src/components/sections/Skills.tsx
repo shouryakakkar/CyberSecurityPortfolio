@@ -6,27 +6,27 @@ import { Shield, Globe, Cpu, Code } from "lucide-react";
 
 const skillCategories = [
     {
-        title: "Security Tools",
+        title: "Offensive Security",
         icon: Shield,
-        skills: ["Nmap", "Burp Suite", "Metasploit", "Wireshark", "Nessus", "Aircrack-ng"],
+        skills: ["VAPT", "WAPT", "API Security", "Active Directory", "LLM Security", "C2 Operations"],
         color: "text-primary",
     },
     {
-        title: "Web Security",
+        title: "Tools & Platforms",
         icon: Globe,
-        skills: ["OWASP Top 10", "SQL Injection", "XSS Identification", "CSRF", "SSRF", "Auth Bypass"],
+        skills: ["Burp Suite Pro", "Nmap", "Metasploit", "BloodHound", "Sliver C2", "Wireshark"],
         color: "text-purple-400",
     },
     {
-        title: "Core Concepts",
+        title: "AppSec & Docs",
         icon: Cpu,
-        skills: ["CIA Triad", "IDS/IPS", "Threat Modeling", "Risk Assessment", "Vulnerability Assessment", "Network Protocols"],
+        skills: ["Audit Reporting", "CVE Mapping", "Remediation Guidance", "CERT-In Compliance", "MITRE ATT&CK"],
         color: "text-green-400",
     },
     {
         title: "Programming",
         icon: Code,
-        skills: ["Python", "Bash Scripting", "JavaScript/TypeScript", "SQL", "C++", "PowerShell"],
+        skills: ["Python", "Bash/Shell", "JavaScript", "SQL"],
         color: "text-blue-400",
     },
 ];

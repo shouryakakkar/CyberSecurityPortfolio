@@ -6,24 +6,11 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
     {
-        role: "Cyber Security Intern",
+        role: "Cyber Security Analyst Intern",
         company: "Cryptus Cyber Security Pvt. Ltd.",
-        period: "Feb 2026 - Aug 2026",
-        description: "",
-    },
-    {
-        role: "Cyber Security Intern",
-        company: "ShadowFox",
-        period: "Aug 2025 - Sep 2025",
-        description: "Assisted in vulnerability assessments, network reconnaissance & penetration testing of web applications using Nmap, Nikto, Wireshark and OWASP Top 10.",
-    },
-    {
-        role: "CTF Player",
-        company: "TryHackMe",
-        period: "2025 - Present",
-        description: "Competed in Capture The Flag competitions and gained hands-on experience in ethical hacking and penetration testing",
+        period: "Feb 2026 - Present",
+        description: "Conducted WAPT and API pentesting, identifying 20+ critical vulnerabilities (SQLi, XSS, IDOR/BOLA). Executed network assessments and authored CERT-In compliance-ready pentest reports. Developed steganography-based Android malware for R&D.",
     }
-
 ];
 
 export function Experience() {

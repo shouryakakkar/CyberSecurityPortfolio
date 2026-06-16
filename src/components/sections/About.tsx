@@ -54,10 +54,9 @@ export function About() {
                                 <span className="text-gray-500">Location</span>
                                 <span className="text-gray-300">Delhi, India</span>
                             </div>
-                            <div className="flex justify-between">
-                                <span className="text-gray-500">Education</span>
-                                <span className="text-gray-300">Bachelor of Technology in Computer Science Engineering</span>
-
+                            <div className="flex justify-between items-start gap-4">
+                                <span className="text-gray-500 whitespace-nowrap">Education</span>
+                                <span className="text-gray-300 text-right">Bennett University, B.Tech CSE (Cyber Security) <br/><span className="text-xs text-gray-500">Aug 2023 - May 2027</span></span>
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-gray-500">Specialization</span>

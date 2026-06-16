@@ -6,6 +6,20 @@ import { ExternalLink, Github, Lock } from "lucide-react";
 
 const projects = [
     {
+        title: "PromptArmor: AI Security Reverse Proxy & Analytics Platform",
+        description: "Architected multi-provider LLM security reverse proxy intercepting traffic across 4 AI providers with a 4-layer detection pipeline neutralizing jailbreaks and prompt injection attacks.",
+        tech: ["Python", "FastAPI", "DistilBERT", "PostgreSQL", "Docker", "Streamlit"],
+        links: { github: "https://github.com/shouryakakkar/PromptArmor", demo: "https://promptarmor.up.railway.app/" },
+        featured: true,
+    },
+    {
+        title: "AD-Attack-Lab: Active Directory Penetration Testing Lab",
+        description: "Simulated enterprise AD attack chain via Kerberoasting, mapped 1,747 AD relationships via BloodHound to identify Domain Admin attack paths, and documented Credential Guard defensive controls.",
+        tech: ["Windows Server 2022", "Rubeus", "BloodHound", "Mimikatz", "Kali Linux"],
+        links: { github: "https://github.com/shouryakakkar/AD-Attack-Lab", demo: "https://medium.com/@shourya.kakkar/building-an-active-directory-attack-lab-kerberoasting-bloodhound-credential-guard-a-hands-on-e7c5db1e7cdd" },
+        featured: true,
+    },
+    {
         title: "PhishGuard: ML-Based Phishing Email & URL Detection Tool",
         description: "A machine learning-powered solution designed to safeguard users from phishing attacks by detecting malicious emails and URLs.",
         tech: ["Python", "Scikit-Learn", "TF-IDF", "Pandas", "NumPy", "React.js", "Node.js"],
@@ -13,17 +27,17 @@ const projects = [
         featured: true,
     },
     {
-        title: "WebSecScan: Web Application & Server Security Assessment Tool",
-        description: "Automated scanner that identifies common web vulnerabilities (XSS, SQLi) and generates PDF reports.",
-        tech: ["Python", "Flask", "Nmap", "Nikto", "OWASP Top 10"],
-        links: { github: "https://github.com/shouryakakkar/WebSecScan", demo: "https://websecscan.onrender.com/" },
+        title: "C2-Lab-Sliver: Red Team Command & Control Simulation",
+        description: "Deployed Sliver C2, generated obfuscated Windows beacons, established persistent HTTP C2 sessions, and mapped MITRE ATT&CK TTPs while documenting EDR detection vectors.",
+        tech: ["Sliver C2", "Kali Linux", "Windows 11", "Python"],
+        links: { github: "https://github.com/shouryakakkar/C2-Lab-Sliver", demo: "#" },
         featured: false,
     },
     {
-        title: "USB Forensics & Endpoint Security Tool",
-        description: "A comprehensive tool for USB forensics and endpoint security, designed to safeguard systems from malicious USB devices.",
-        tech: ["Python", "Tkinter", "Pynput", "USBGuard", "Forensics", "Endpoint Security"],
-        links: { github: "https://github.com/shouryakakkar/USB-Forensics-Tool", demo: "#" },
+        title: "ChainStrike: Automated Offensive Recon & Reporting Tool",
+        description: "Built a Python CLI tool chaining Nmap, Gobuster, and Nikto. Automatically parses outputs and generates HTML pentest reports with CVE mappings and MITRE ATT&CK TTP tags.",
+        tech: ["Python", "Nmap", "Gobuster", "Nikto", "MITRE ATT&CK"],
+        links: { github: "https://github.com/shouryakakkar/ChainStrike", demo: "#" },
         featured: false,
     },
 ];
