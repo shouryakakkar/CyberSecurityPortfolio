@@ -8,20 +8,22 @@ import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
-  return (
-    <main className="bg-background min-h-screen text-text selection:bg-primary/20">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Terminal />
-      <Projects />
-      <Experience />
-      <Contact />
+    return (
+        <main className="relative min-h-screen z-10">
+            <Navbar />
+            <Hero />
+            <About />
+            <Skills />
+            <Terminal />
+            <Projects />
+            <Experience />
+            <Contact />
 
-      <footer className="py-8 text-center text-gray-600 text-sm font-mono border-t border-white/5 bg-black/50">
-        <p>© {new Date().getFullYear()} Shourya Kakkar. All systems operational.</p>
-      </footer>
-    </main>
-  );
+            <footer className="py-10 text-center border-t border-white/5 relative z-10">
+                <p className="text-xs font-mono tracking-[0.2em] uppercase text-silver-300">
+                    © {new Date().getFullYear()} Shourya Kakkar — All systems operational
+                </p>
+            </footer>
+        </main>
+    );
 }

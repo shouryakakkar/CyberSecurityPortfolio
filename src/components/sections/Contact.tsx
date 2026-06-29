@@ -2,51 +2,71 @@
 
 import { Section } from "@/components/ui/Section";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+
+const socials = [
+    { href: "mailto:shouryakakkar2006@gmail.com", icon: Mail, label: "Email", handle: "shouryakakkar2006@gmail.com" },
+    { href: "https://www.linkedin.com/in/shouryakakkar/", icon: Linkedin, label: "LinkedIn", handle: "/in/shouryakakkar" },
+    { href: "https://github.com/shouryakakkar", icon: Github, label: "GitHub", handle: "/shouryakakkar" },
+];
 
 export function Contact() {
     return (
-        <Section id="contact" className="py-20 text-center">
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                className="glass max-w-2xl mx-auto p-12 rounded-2xl border border-white/5 relative overflow-hidden"
-            >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <Section id="contact">
+            <div className="max-w-4xl mx-auto">
+                <p className="section-label mb-6">05 — Contact</p>
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Ready to <span className="text-primary">Secure</span> Your Infrastructure?
-                </h2>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                >
+                    {/* Big CTA heading */}
+                    <h2 className="font-[family-name:var(--font-display)] italic text-5xl sm:text-6xl md:text-7xl text-white leading-tight mb-16">
+                        Let's work<br />
+                        <span
+                            style={{
+                                background: "linear-gradient(135deg, #f0f0f4 0%, #787890 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                            }}
+                        >
+                            together.
+                        </span>
+                    </h2>
 
-                <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-                    Currently available for internship opportunities and freelance projects.
-                    Let's discuss how I can help protect your digital assets.
-                </p>
+                    {/* Divider */}
+                    <div className="w-full h-px bg-white/8 mb-14" />
 
-                <div className="flex justify-center gap-6">
-                    <a
-                        href="mailto:shouryakakkar2006@gmail.com"
-                        className="p-4 rounded-full bg-white/5 hover:bg-primary/20 text-white hover:text-primary transition-all hover:scale-110 border border-white/5"
-                        aria-label="Email"
-                    >
-                        <Mail className="w-6 h-6" />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/shouryakakkar/"
-                        className="p-4 rounded-full bg-white/5 hover:bg-primary/20 text-white hover:text-primary transition-all hover:scale-110 border border-white/5"
-                        aria-label="LinkedIn"
-                    >
-                        <Linkedin className="w-6 h-6" />
-                    </a>
-                    <a
-                        href="https://github.com/shouryakakkar"
-                        className="p-4 rounded-full bg-white/5 hover:bg-primary/20 text-white hover:text-primary transition-all hover:scale-110 border border-white/5"
-                        aria-label="GitHub"
-                    >
-                        <Github className="w-6 h-6" />
-                    </a>
-                </div>
-            </motion.div>
+                    {/* Social links */}
+                    <div className="grid sm:grid-cols-3 gap-0 border border-white/6 rounded-xl overflow-hidden">
+                        {socials.map(({ href, icon: Icon, label, handle }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                target={href.startsWith("mailto") ? undefined : "_blank"}
+                                rel="noopener noreferrer"
+                                className="group flex items-center justify-between p-6 border-b sm:border-b-0 sm:border-r border-white/6 last:border-0 hover:bg-white/[0.025] transition-colors duration-300"
+                            >
+                                <div className="flex items-center gap-4">
+                                    <Icon className="w-4 h-4 text-silver-500 group-hover:text-white transition-colors" />
+                                    <div>
+                                        <p className="text-xs font-mono tracking-[0.15em] uppercase text-silver-400 mb-0.5">{label}</p>
+                                        <p className="text-sm font-mono text-silver-300 group-hover:text-white transition-colors truncate max-w-[160px]">{handle}</p>
+                                    </div>
+                                </div>
+                                <ArrowUpRight className="w-3.5 h-3.5 text-silver-600 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                            </a>
+                        ))}
+                    </div>
+
+                    {/* Availability note */}
+                    <p className="mt-8 text-xs font-mono tracking-[0.15em] uppercase text-silver-300 text-center">
+                        Available for internships, freelance &amp; full-time positions
+                    </p>
+                </motion.div>
+            </div>
         </Section>
     );
 }
